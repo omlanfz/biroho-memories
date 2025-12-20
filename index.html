@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-T0NZ4S4XVS"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-T0NZ4S4XVS");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>For the Memories We Made</title>
@@ -257,28 +272,44 @@
         <div
           class="glass-panel p-3 rounded-[2.5rem] shadow-2xl ring-1 ring-white/10"
         >
-          <div class="relative video-portrait-container rounded-[2rem] overflow-hidden bg-black shadow-inner border border-white/5 group cursor-pointer" id="videoWrapper">
-    
-    <div id="playOverlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-[2px] transition-opacity duration-500">
-        <div class="w-20 h-20 flex items-center justify-center rounded-full bg-white/20 border border-white/30 hover:bg-white/40 transition-all scale-100 hover:scale-110">
-            <svg class="w-8 h-8 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <p class="text-white mt-4 font-medium tracking-wide drop-shadow-lg">Click to Play with Sound</p>
-    </div>
+          <div
+            class="relative video-portrait-container rounded-[2rem] overflow-hidden bg-black shadow-inner border border-white/5 group cursor-pointer"
+            id="videoWrapper"
+          >
+            <div
+              id="playOverlay"
+              class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/40 backdrop-blur-[2px] transition-opacity duration-500"
+            >
+              <div
+                class="w-20 h-20 flex items-center justify-center rounded-full bg-white/20 border border-white/30 hover:bg-white/40 transition-all scale-100 hover:scale-110"
+              >
+                <svg
+                  class="w-8 h-8 text-white fill-current"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+              <p
+                class="text-white mt-4 font-medium tracking-wide drop-shadow-lg"
+              >
+                Click to Play with Sound
+              </p>
+            </div>
 
-    <video controls
-      id="mainVideo"
-      class="absolute top-0 left-0 w-full h-full object-cover opacity-90"
-      loop
-      playsinline
-      poster="https://placehold.co/400x711/020617/fb7185?text=Long Distance Love..."
-    >
-      <source src="coke-studio.mp4" type="video/mp4" />
-    </video>
+            <video
+              controls
+              id="mainVideo"
+              class="absolute top-0 left-0 w-full h-full object-cover opacity-90"
+              loop
+              playsinline
+              poster="https://placehold.co/400x711/020617/fb7185?text=Long Distance Love..."
+            >
+              <source src="coke-studio.mp4" type="video/mp4" />
+            </video>
 
-    <div class="absolute inset-0 z-10 pointer-events-none">
-        </div>
-</div>
+            <div class="absolute inset-0 z-10 pointer-events-none"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -319,9 +350,7 @@
         <h2 class="font-serif text-3xl md:text-4xl text-slate-100 mb-2">
           বিরহ যেন কেটে যায়<span class="heart-beat inline-block">🖤</span>
         </h2>
-        <p class="text-slate-500 italic">
-          Messages that stuck with me😮‍💨
-        </p>
+        <p class="text-slate-500 italic">Messages that stuck with me😮‍💨</p>
       </div>
 
       <div class="carousel-wrapper fade-in-section" id="carousel-wrapper">
@@ -393,21 +422,21 @@
     </footer>
 
     <script>
-      const wrapper = document.getElementById('videoWrapper');
-const video = document.getElementById('mainVideo');
-const overlay = document.getElementById('playOverlay');
+      const wrapper = document.getElementById("videoWrapper");
+      const video = document.getElementById("mainVideo");
+      const overlay = document.getElementById("playOverlay");
 
-wrapper.addEventListener('click', () => {
-    // Unmute and Play
-    video.muted = false; 
-    video.play();
-    
-    // Smoothly hide the overlay
-    overlay.classList.add('opacity-0');
-    setTimeout(() => {
-        overlay.style.display = 'none';
-    }, 500);
-});
+      wrapper.addEventListener("click", () => {
+        // Unmute and Play
+        video.muted = false;
+        video.play();
+
+        // Smoothly hide the overlay
+        overlay.classList.add("opacity-0");
+        setTimeout(() => {
+          overlay.style.display = "none";
+        }, 500);
+      });
       const localWisdom = [
         "Labi, I still can't believe I get to call you mine. 🖤",
         "Labi, you're the main character of my life. Everything else is just background noise.",
